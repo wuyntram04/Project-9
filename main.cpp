@@ -163,15 +163,6 @@ int guess(int low, int high, int& count) {
         return low;
     }
 
-    // Smart case: only one number between low and high
-    if (high - low == 2) {
-        int mid = (low + high) / 2;
-        cout << "\n\tIt must be " << mid << "! (only one number fits)\n";
-        count++;
-        cout << "\n\tYay! I guessed your number.\n";
-        return mid;
-    }
-
     // For adjacent numbers (only 2 left), check directly
     if (high - low == 1) {
         count++;
